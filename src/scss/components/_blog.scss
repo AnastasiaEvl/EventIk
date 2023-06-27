@@ -33,11 +33,11 @@
     'title-blog'
     'text-blog'
     'date-blog';
-}
-&__card-img{
+&-img{
   grid-area: img-blog;
   border-radius: 20px;
   width: 100%;
+}
 
 }
 &__title{

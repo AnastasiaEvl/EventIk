@@ -1,10 +1,8 @@
-@import '../mixin';
-
 .header {
   display: grid;
   align-items: center;
   height: 4rem;
-  padding: 1rem 1rem;
+  padding: 1rem;
   z-index: 3;
   justify-content: center;
   grid-template-columns: repeat(6, 1fr);
@@ -15,102 +13,23 @@
     grid-column: 1 / 2;
     padding-left: 1rem;
     min-width: 10px;
-  }
 
-  &__menu {
-    grid-column: 6 / -1;
-    @include media(display, (none, none));
-  }
-
-  &__menu-burger {
-    grid-column: 6 / -1;
-    justify-self: end;
-    position: absolute;
-    display: inline;
-    opacity: 0;
-  }
-
-  &__menu-line {
-    background: $based-text-color;
-    height: 3px;
-    width: 2.3rem;
-    grid-column: 5 / -1;
-    display: block;
-    position: relative;
-    transition: all ease 0.1s;
-
-    &:after {
-      @include burger-lines-menu;
-      top: 0.6rem;
-    }
-
-    &:before {
-      @include burger-lines-menu;
-      top: -0.6rem;
+    &--padding {
+      padding-left: 0;
     }
   }
-
-  &__menu-burger {
-    position: absolute;
-    display: inline;
-    margin-left: 80%;
-    background-color: transparent;
-    opacity: 0;
-
-    &:focus ~ .header__menu {
-      outline: 10px solid grey;
-      width: 30px;
-    }
-
-    &:checked ~ .header__menu {
-      outline: 7px solid transparent;
-      width: 2px;
-    }
-
-    &:checked ~ .header__menu > .header__menu-line {
-      transform: rotate(45deg);
-    }
-
-    &:checked ~ .header__menu > .header__menu-line::before {
-      top: 0;
-      transform: rotate(0);
-    }
-
-    &:checked ~ .header__menu > .header__menu-line::after {
-      top: 0;
-      transform: rotate(90deg);
-    }
-
-    &:checked ~ .header-nav {
-      display: flex;
-      left: 0;
-      top: 0;
-      position: fixed;
-      z-index: 5;
-      width: 10.7rem;
-      height: 35%;
-      margin: 0;
-      text-align: center;
-      background-color: #ED4690;
-      padding: 0.9rem 1.7rem;
-      line-height: 3rem;
-      border-radius: 0 0 1.4rem;
-      box-shadow: 0 0 0.4rem red;
-    }
-  }
+}
 
 .header-nav {
   display: none;
   @include media(display, (inline, inline));
   grid-column: 4 / -1;
-
   &__menu {
     display: flex;
     flex-direction: column;
     @include media(display,(grid, grid));
     @include media(grid-template-columns,(repeat(5,auto), repeat(5,auto)));
   }
-
   &__section {
     color: $based-text-color;
     $section: &;
@@ -120,16 +39,16 @@
     padding: 0.5rem 0.8rem;
     border-radius: 1.4rem;
     transition: 1s;
-
     &:hover {
       border: 1px solid white;
       transition: 0.5s;
       cursor: pointer;
+      text-decoration: none;
     }
-
   }
 }
-}
+
+
 
 
 

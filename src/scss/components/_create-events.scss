@@ -1,18 +1,26 @@
 .create-events{
   background-color: #E2E0FF;
-  @include media(padding,(1rem 2rem 0,1rem 6.25rem 0));
+  @include media(padding,(4rem 2rem 0,5rem 6.25rem 0));
   height: 20rem;
   @include media(height,(20rem,20rem));
   display: grid;
   grid-template-columns: auto;
-  @include media(grid-template-columns,(minmax(320px,350px) minmax(280px,382px),minmax(320px,665px) minmax(280px,420px)));
+  @include media(justify-content, (left, left));
+  @include media(grid-template-columns,(minmax(320px,350px) minmax(280px,382px),minmax(320px,545px) minmax(280px,382px)));
 
 &__img{
   display: none;
-  width: 100%;
-  @include media(display,(inline,inline));
-  @include media(bottom,(-0.9rem, 4.1rem));
+  width:110%;
+  max-width: 560px;
+  @include media(display,(flex,flex));
+  @include media(bottom,(0, 33%));
   @include media(position,(relative, relative));
 }
+}
+@media (min-width: 2550px) {
+.create-events{
+  justify-content:center;
+}
+  
 }
 

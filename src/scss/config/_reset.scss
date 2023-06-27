@@ -1,15 +1,12 @@
-@import 'function';
-@import 'mixins/variables';
-
 *{
   margin: 0;
   box-sizing: border-box;
 }
 html{
   scroll-behavior: smooth;
-  font-size: 14px;
+  font-size: $font-size-for-phone;
   width: 100vw;
-  @include media(font-size, (14px, 16px));
+  @include media(font-size, ($font-size-for-tablet, $font-size-for-desktop));
 }
 body{
   background: url('/src/assets/pictures/banner.png') no-repeat center top fixed;

@@ -34,14 +34,10 @@
   border-bottom: 1px solid #BDBDBD;
   font-size: 1rem;
   @include media(grid-row,(2,2));
-}
-&__input:focus{
-  border-bottom: 2px solid gray;
-}
-&__input:active{
-  border-bottom: 2px dashed gray;
+  @include border-input(gray);
 }
 }
+
 
 
 

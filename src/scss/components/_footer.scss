@@ -1,5 +1,6 @@
 .footer {
   background-color: $blue-text-color;
+  $self: &;
   display: grid;
   width: 100vw;
   justify-items: center;
@@ -24,17 +25,15 @@
     left:5%;
   }
 
-
   &__label {
     display: flex;
     flex-direction: column;
     width: 20.8rem;
     justify-content: left;
-  }
-
-  &__label-link {
+  &-link {
     @include media(text-align,(center, left));
     text-align: center;
+  }
   }
 
   &__description {
@@ -58,11 +57,6 @@
     gap:1rem;
     @include media(justify-content,(center, left));
   }
-
-  .header__logo--padding {
-    padding-left: 0;
-  }
-
   &__form {
     display: grid;
     justify-content: center;
@@ -89,9 +83,15 @@
     position: relative;
     width: 22rem;
     height: 4rem;
+
+    &::placeholder {
+      color: #959595;
+      font-size: 0.9rem;
+      padding-left: 0.4rem;
+    }
   }
 
-  &__plan-events-list {
+  &__plan-events-links {
     background-color: $light-blue-color;
     width: 9rem;
     padding: 1em;
@@ -108,26 +108,26 @@
     text-align: center;
   }
 
-  &__plan-events li {
+  &__plan-events {
+    &-title{
     position: relative;
     float: left;
+      &:hover #{$self}__plan-events-links{
+        display: block;
+      }
+  }
   }
 
-  &__plan-events li:hover ul {
-    display: block;
-  }
-
-  &__plan-events li ul {
+  &__plan-events
+  {
+    &-title {
+      #{$self}__plan-events-links {
     display: none;
     position: absolute;
     left: 0;
     bottom: 100%;
   }
-
-  &__input::placeholder {
-    color: #959595;
-    font-size: 0.9rem;
-    padding-left: 0.4rem;
+    }
   }
 
   &__form {

@@ -1,8 +1,7 @@
 .brand{
   padding: 2.5rem 0.5rem;
   background-color: white;
-}
-.brand__img{
+&__img{
   padding: 0;
   justify-content: space-around;
   display:grid;
@@ -13,11 +12,13 @@
   @include media(grid-template-rows,(repeat(3, auto), repeat(1,auto)));
   @include media(grid-template-columns, (repeat(3,auto), repeat(1,auto)));
   gap: 1rem;
-}
-.brand__img-logo{
+
+&-logo {
   width: 5rem;
   align-self: center;
-  @include media(width,(10rem,12rem));
+  @include media(width, (10rem, 12rem));
+}
+}
 }
 
 @media (min-width: 1024px) {

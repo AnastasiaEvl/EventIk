@@ -22,6 +22,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/scss/main.css" />
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <title>Eventik</title>
   </head>
   <body>
@@ -38,6 +45,8 @@
           id="header__menu"
           type="checkbox"
           class="header__menu-burger"
+          tabindex="0"
+          role="button"
         />
         <label
           aria-label="burger menu label"
@@ -66,36 +75,90 @@
           </ul>
         </nav>
       </header>
-      <div class="content">
+      <main class="content">
         <section class="first-fold">
-          <img
-            class="first-fold__banner"
-            src="./src/assets/pictures/banner-main.png"
-            alt="pop group banner"
-          />
-          <div class="section-header">
-            <h1 class="section-header__title">
-              SBS MTV The Kpop Show Ticket Package
-            </h1>
-            <p class="section-header__description">
-              Look no further! Our SBS The Show tickets are the simplest way for
-              you to experience a live Kpop recording.
-            </p>
-            <div class="first-fold__buttons-container">
-              <button type="button" class="button button--colored">
-                get ticket
-              </button>
-              <button type="button" class="button button--transparent">
-                learn more
-              </button>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div>
+              <img
+                      class="first-fold__banner"
+                      src="./src/assets/pictures/banner-main.png"
+                      alt="pop group banner"
+              /></div>
+              <div class="section-header">
+                <h1 class="section-header__title">
+                  SBS MTV The Kpop Show Ticket Package
+                </h1>
+                <p class="section-header__description">
+                  Look no further! Our SBS The Show tickets are the simplest way for
+                  you to experience a live Kpop recording.
+                </p>
+                <div class="first-fold__buttons-container">
+                  <button type="button" class="button button--colored">
+                    get ticket
+                  </button>
+                  <button type="button" class="button button--transparent">
+                    learn more
+                  </button>
+                </div>
+              </div>
             </div>
+            <div class="swiper-slide"><img
+                    class="first-fold__banner"
+                    src="./src/assets/pictures/banner-main.png"
+                    alt="pop group banner"
+            />
+              <div class="section-header">
+                <h1 class="section-header__title">
+                  SBS MTV The Kpop Show Ticket Package
+                </h1>
+                <p class="section-header__description">
+                  Look no further! Our SBS The Show tickets are the simplest way for
+                  you to experience a live Kpop recording.
+                </p>
+                <div class="first-fold__buttons-container">
+                  <button type="button" class="button button--colored">
+                    get ticket
+                  </button>
+                  <button type="button" class="button button--transparent">
+                    learn more
+                  </button>
+                </div>
+              </div></div>
+            <div class="swiper-slide">
+              <img
+                    class="first-fold__banner"
+                    src="./src/assets/pictures/banner-main.png"
+                    alt="pop group banner"
+            />
+              <div class="section-header">
+                <h1 class="section-header__title">
+                  SBS MTV The Kpop Show Ticket Package
+                </h1>
+                <p class="section-header__description">
+                  Look no further! Our SBS The Show tickets are the simplest way for
+                  you to experience a live Kpop recording.
+                </p>
+                <div class="first-fold__buttons-container">
+                  <button type="button" class="button button--colored">
+                    get ticket
+                  </button>
+                  <button type="button" class="button button--transparent">
+                    learn more
+                  </button>
+                </div>
+              </div></div>
           </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
         </section>
         <section class="search-box">
           <h2 class="invisible-title">Search box form</h2>
           <form
             class="search-box__form"
-            action="#"
+            action="mailto:eventik@test.com"
             method="post"
             id="search-form"
           >
@@ -223,26 +286,26 @@
               <p class="upcoming-events__description">
                 Directly seated and inside for you to enjoy the show.
               </p>
-            </article>
-            <article class="upcoming-events__block">
-              <img
-                class="upcoming-events__block-img"
-                src="./src/assets/pictures/events-four.png"
-                alt="banner"
-              />
-              <p class="upcoming-events__block-date">
-                <ruby>
-                  14<rt class="upcoming-events__block-month">APR</rt></ruby
-                >
-              </p>
-              <h2 class="upcoming-events__title">
-                Wonder Girls 2010 Wonder Girls World Tour San Francisco
-              </h2>
-              <p class="upcoming-events__description">
-                We’ll get you directly seated and inside for you to enjoy the
-                show.
-              </p>
-            </article>
+            </article> <article class="upcoming-events__block">
+            <img
+                    class="upcoming-events__block-img"
+                    src="./src/assets/pictures/events-four.png"
+                    alt="banner"
+            />
+            <p class="upcoming-events__block-date">
+              <ruby>
+                14<rt class="upcoming-events__block-month">APR</rt></ruby
+              >
+            </p>
+            <h2 class="upcoming-events__title">
+              Wonder Girls 2010 Wonder Girls World Tour San Francisco
+            </h2>
+            <p class="upcoming-events__description">
+              We’ll get you directly seated and inside for you to enjoy the
+              show.
+            </p>
+          </article>
+
             <article class="upcoming-events__block">
               <img
                 class="upcoming-events__block-img"
@@ -438,7 +501,7 @@
             load more
           </button>
         </section>
-      </div>
+      </main>
       <footer class="footer">
         <div class="footer__label">
           <a class="footer__label-link" href="#"
@@ -452,50 +515,50 @@
             experiences that allows anyone to create, share, find and attend
             events that fuel their passions and enrich their lives.
           </p>
-          <div class="footer__imgs">
-            <a href="#"
+          <address class="footer__imgs">
+            <a class="footer__imgs-icon" href="#"
               ><img
                 class="footer__imgs-icons"
                 src="./src/assets/icons/facebook.svg"
                 alt="facebook"
             /></a>
-            <a href="#">
+            <a class="footer__imgs-icon" href="#">
               <img
                 class="footer__imgs-icons"
                 src="./src/assets/icons/telegram.svg"
                 alt="twitter"
             /></a>
-            <a href="#"
+            <a class="footer__imgs-icon" href="#"
               ><img
                 class="footer__imgs-icons"
                 src="./src/assets/icons/linkedin.svg"
                 alt="linkedin"
             /></a>
-          </div>
+          </address>
         </div>
         <div class="footer__list">
           <ul class="footer__plan-events">
             <li class="footer__plan-events-title">
               <h2 class="footer__title-list">Plan Events</h2>
-              <ul class="footer__plan-events-list">
-                <li><a>Create and Set Up</a></li>
-                <li><a>Sell Tickets</a></li>
-                <li><a>Online RSVP</a></li>
-                <li><a>Online Events</a></li>
+              <ul class="footer__plan-events-links">
+                <li class="footer__plan-events-point"><a href="#" class="footer__link-way">Create and Set Up</a></li>
+                <li class="footer__plan-events-point"><a href="#" class="footer__link-way">Sell Tickets</a></li>
+                <li class="footer__plan-events-point"><a href="#" class="footer__link-way">Online RSVP</a></li>
+                <li class="footer__plan-events-point"><a href="#" class="footer__link-way">Online Events</a></li>
               </ul>
             </li>
           </ul>
           <ul class="footer__plan-events">
             <li class="footer__plan-events-title">
               <h2 class="footer__title-list">Eventick</h2>
-              <ul class="footer__plan-events-list">
-                <li><a>About us</a></li>
-                <li><a>Press</a></li>
-                <li><a>Contact Us</a></li>
-                <li><a>Help Center</a></li>
-                <li><a>How it Works</a></li>
-                <li><a>Privacy</a></li>
-                <li><a>Terms</a></li>
+              <ul class="footer__plan-events-links">
+                <li class="footer__plan-events-point"><a href="#" class="footer__link-way">About us</a></li>
+                <li class="footer__plan-events-point"><a href="#" class="footer__link-way">Press</a></li>
+                <li class="footer__plan-events-point"><a href="#" class="footer__link-way">Contact Us</a></li>
+                <li class="footer__plan-events-point"><a href="#" class="footer__link-way">Help Center</a></li>
+                <li class="footer__plan-events-point"><a href="#" class="footer__link-way">How it Works</a></li>
+                <li class="footer__plan-events-point"><a href="#" class="footer__link-way">Privacy</a></li>
+                <li class="footer__plan-events-point"><a href="#" class="footer__link-way">Terms</a></li>
               </ul>
             </li>
           </ul>
@@ -505,12 +568,12 @@
           <ul
             class="footer__plan-events-list-laptop footer__plan-events-list-laptop--width"
           >
-            <li><a>Create and Set Up </a></li>
-            <li><a>Sell Tickets</a></li>
-            <li>
+            <li class="footer__plan-events-point-link"><a>Create and Set Up </a></li>
+            <li class="footer__plan-events-point-link"><a>Sell Tickets</a></li>
+            <li class="footer__plan-events-point-link">
               <a>Online RSVP</a>
             </li>
-            <li>
+            <li class="footer__plan-events-point-link">
               <a>Online Events</a>
             </li>
           </ul>
@@ -518,21 +581,21 @@
         <div class="footer__title-base-list">
           <h2>Eventick</h2>
           <ul class="footer__plan-events-list-laptop">
-            <li><a>About us </a></li>
-            <li><a>Press</a></li>
-            <li>
+            <li class="footer__plan-events-point-link"><a>About us </a></li>
+            <li class="footer__plan-events-point-link"><a>Press</a></li>
+            <li class="footer__plan-events-point-link">
               <a>Contact Us</a>
             </li>
-            <li>
+            <li class="footer__plan-events-point-link">
               <a>Help Center</a>
             </li>
-            <li>
+            <li class="footer__plan-events-point-link">
               <a>How it Works</a>
             </li>
-            <li>
+            <li class="footer__plan-events-point-link">
               <a>Privacy</a>
             </li>
-            <li>
+            <li class="footer__plan-events-point-link">
               <a>Terms</a>
             </li>
           </ul>
@@ -560,5 +623,6 @@
         <p class="footer__right">Copyright © 2022 Avi Yansah</p>
       </footer>
     </div>
+    <script src="src/script.js"></script>
   </body>
 </html>

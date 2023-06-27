@@ -1,0 +1,20 @@
+.swiper-wrapper{
+  width: 100%;
+}
+.swiper {
+  width: 95%;
+  height: auto;
+  grid-column: 1 / -1;
+}
+.swiper-slide{
+  padding: 4rem 3rem;
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  position: relative;
+  grid-template-columns: auto;
+  @include media(grid-template-columns,(minmax(250px,250px) minmax(250px,320px),minmax(320px,636.836px) minmax(280px,443px)));
+  grid-template-rows: repeat(4, auto);
+  justify-content: center;
+  width: 100%;
+}
