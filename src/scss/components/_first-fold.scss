@@ -13,13 +13,13 @@
   display: none;
   @include media(display,(inline, inline));
   width: 100%;
-  //max-height: 476px;
   grid-row: 1 / 4;
 }
 &__buttons-container{
   display: flex;
   justify-content: space-around;
   padding-top: 2rem;
+  gap:1rem;
   @include media(justify-content,(left, left));
   @include media(gap, (1rem, 1rem ));
 }}

@@ -12,10 +12,19 @@
   @include media(text-align, (left, left));
 
   &__title{
-    font-size: 2rem;
+    font-size: 2.125rem;
     font-weight: 700;
     padding-bottom: 2rem;
     text-transform: capitalize;
+
+    &--blue{
+      color: $blue-text-color;
+      grid-area: header;
+      font-size: 2.125rem;
+      grid-column: 1/-1;
+      @include media(grid-column,('1 / 2', '1 / 2'));
+      @include media(padding-left,(0, 1rem));
+    }
   }
 
   &__description{
@@ -26,18 +35,11 @@
     &--light-grey{
       color: #6A6A6A;
       text-align: center;
-      padding-top: 1rem;
+      padding-top: 1.125rem;
     }
   }
 
-  &__title--blue{
-    color: $blue-text-color;
-    grid-area: header;
-    font-size: 2rem;
-    grid-column: 1/-1;
-    @include media(grid-column,('1 / 2', '1 / 2'));
-    @include media(padding-left,(0, 1rem));
-  }
+
 
   &--black{
     color: black;

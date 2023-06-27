@@ -1,10 +1,11 @@
 .create-events{
   background-color: #E2E0FF;
   @include media(padding,(1rem 2rem 0,1rem 6.25rem 0));
-  height: 15.8rem;
+  height: 20rem;
+  @include media(height,(20rem,20rem));
   display: grid;
   grid-template-columns: auto;
-  @include media(grid-template-columns,(minmax(320px,350px) minmax(280px,382px),minmax(320px,544px) minmax(280px,382px)));
+  @include media(grid-template-columns,(minmax(320px,350px) minmax(280px,382px),minmax(320px,665px) minmax(280px,420px)));
 
 &__img{
   display: none;

@@ -55,16 +55,17 @@
   grid-area: date;
   padding-top: 1.8rem;
   padding-left: 1.5rem;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
 }
 &__block-month{
   color: $light-blue-color;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
 &__title{
   grid-area: name;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   color: #000000;
   padding: 1rem 1rem 1rem;
   text-align: left;
@@ -73,7 +74,7 @@
   grid-area: cont;
   padding: 1rem 1rem 1rem;
   color: #6A6A6A;
-  font-size: 1rem;
+  font-size: 0.8rem;
   word-wrap: break-word;
   text-align: left;
   justify-self: center;

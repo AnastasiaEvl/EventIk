@@ -1,6 +1,7 @@
 .blog{
   @include cards-block-area;
   padding: 1rem 1rem 4rem 0.5rem;
+  font-family: $based-font-text;
   grid-template-areas:
 "header"
 "blog-text"
@@ -25,6 +26,7 @@
   border-radius: 20px;
   text-align: left;
   grid-row-gap: 0.5rem;
+  padding:0.5rem;
   grid-template-rows: repeat(4, auto);
   grid-template-areas:
     'img-blog'
@@ -40,17 +42,18 @@
 }
 &__title{
   color: #242565;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   grid-area: title-blog;
 }
 &__text{
-  font-size:1rem;
+  font-size:0.85rem;
   grid-area: text-blog;
 }
 &__date{
   grid-area: date-blog;
   color: #A5A5A5;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  padding-top: 1rem;
 }
 }
 
