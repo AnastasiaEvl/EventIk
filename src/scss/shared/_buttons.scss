@@ -1,0 +1,94 @@
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,8%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  &:active {
+    background:darken($bg,25%);
+  }
+}
+
+.button{
+  border-radius: 50px;
+  border-color: transparent;
+  width: 9rem;
+  color: $based-text-color;
+  font-family:$based-font-text;
+  font-size: 1.1em;
+  position: relative;
+  z-index: 2;
+  text-transform: capitalize;
+  padding:1rem;
+  text-align: center;
+  justify-self: center;
+  transition: 1s;
+
+  &--colored{
+    @include button-bg($pink-color);
+    box-shadow: $box-shadow;
+  }
+  &--transparent{
+    @include button-bg(rgba(28,28,28,0));
+    border: 1.5px solid $based-text-color;
+    box-shadow: $box-shadow;
+    &:hover{
+      cursor: pointer;
+      background-color:#4C4D8B;
+    }
+  }
+
+  &-events{
+    color: $blue-text-color;
+    background: url("/src/assets/icons/vector-blue.svg") 90% no-repeat #F2F4FF;
+    text-align: left;
+    width: 9rem;
+    appearance: none;
+    margin: 0.2rem;
+    transition: 1s;
+    cursor: pointer;
+    &:hover{
+      background-color: #4C4D8B;
+      transition: 0.5s;
+      color:white;
+    }
+  }
+
+  &-transparent-blue{
+    grid-area: button-load;
+    @include button-bg(rgba(28,28,28,0));
+    border: 1.5px solid $light-blue-color;
+    justify-self: center;
+    color: $light-blue-color;
+    transition: 1s;
+    &:hover{
+      cursor: pointer;
+      background-color:#4C4D8B;
+      color:white;
+      transition: 0.5s;
+    }
+  }
+  &-create-events{
+    @include button-bg($pink-color);
+    box-shadow: $box-shadow;
+    @include media(grid-column,('2 / 3','2 / 3'));
+    @include media(grid-row,('2 / 3', '2 / 3'));
+    @include media(margin-top,(2rem,2rem));
+    @include media(width,(10rem,18.9rem));
+    margin-top:1rem;
+  }
+  &__footer {
+    position: absolute;
+    @include media(display, (none, inline));
+    left: 12rem;
+    top: 1.3rem;
+    width: 9.36rem;
+    cursor: pointer;
+    @include button-bg($pink-color);
+
+  }
+
+}
+
+

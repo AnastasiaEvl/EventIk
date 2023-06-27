@@ -1,0 +1,48 @@
+@import 'function';
+@import 'mixins/variables';
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+  font-size: 14px;
+  width: 100vw;
+  @include media(font-size, (14px, 16px));
+}
+body{
+  background: url('/src/assets/pictures/banner.png') no-repeat center top fixed;
+  position: relative;
+  height: 100%;
+  width: 100vw;
+  background-size: cover;
+  overflow-x: hidden;
+}
+body:after{
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  width:100vw;
+  background: linear-gradient(100deg, #ED4690 -2.11%, #5522CC 63.58%);
+  opacity: 0.95;
+}
+article{
+  transition: 1s;
+}
+article:hover{
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: 0.5s;
+}
+a{
+  font-family: $based-font-text;
+  cursor: pointer;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+

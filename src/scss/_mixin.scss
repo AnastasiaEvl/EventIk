@@ -1,0 +1,16 @@
+@mixin burger-lines-menu{
+  background: white;
+  height: 3px;
+  width: 32px;
+  display: block;
+  position: absolute;
+  content: '';
+  left: 0;
+  transition:all ease 0.2s;
+}
+@mixin cards-block-area{
+  display: grid;
+  background-color: $based-text-color;
+  grid-gap: 2rem;
+  text-align: center;
+}

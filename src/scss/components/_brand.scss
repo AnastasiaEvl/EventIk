@@ -1,0 +1,30 @@
+.brand{
+  padding: 2.5rem 0.5rem;
+  background-color: white;
+}
+.brand__img{
+  padding: 0;
+  justify-content: space-around;
+  display:grid;
+  @include media(justify-content,(space-around,space-evenly));
+  @include media(display,(grid,flex));
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(3,auto);
+  @include media(grid-template-rows,(repeat(3, auto), repeat(1,auto)));
+  @include media(grid-template-columns, (repeat(3,auto), repeat(1,auto)));
+  gap: 1rem;
+}
+.brand__img-logo{
+  width: 5rem;
+  align-self: center;
+  @include media(width,(10rem,12rem));
+}
+
+@media (min-width: 1024px) {
+  .brand__img{
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 73%;
+  }
+}
+

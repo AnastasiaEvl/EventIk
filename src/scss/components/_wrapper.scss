@@ -1,0 +1,22 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+  'header'
+  'content'
+  'footer';
+  grid-template-rows: 4rem auto auto;
+  background-color: transparent;
+  grid-template-columns: repeat(12,auto);
+  @include media(grid-template-columns, (repeat(12,auto), repeat(12,auto)));
+  width: 100vw;
+}
+.content{
+  grid-area: content;
+  grid-column: 1 / -1;
+  z-index: 1;
+  width: 100vw;
+}
+
+
+
+

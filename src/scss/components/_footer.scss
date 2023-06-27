@@ -1,0 +1,152 @@
+.footer {
+  background-color: $blue-text-color;
+  display: grid;
+  width: 100vw;
+  color: white;
+  font-size: 0.9rem;
+  padding: 2rem 1rem 2rem 1rem;
+  line-height: 1.4rem;
+  grid-area: footer;
+  grid-column: 1 / -1;
+  z-index: 1;
+  grid-gap: 2rem;
+  justify-content: space-around;
+  @include media(grid-template-rows, (repeat(3, auto), repeat(3, auto)));
+  @include media(grid-template-columns, (repeat(3, auto), repeat(4, auto)));
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 90%;
+    border: 1px solid #4C4D8B;;
+    bottom: 4rem;
+    left:5%;
+  }
+
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    width: 20.8rem;
+    justify-content: left;
+
+  }
+
+  &__label-link {
+    text-align: left;
+    padding: 0;
+  }
+
+  &__description {
+    padding-top: 1.5rem;
+    text-align: left;
+  }
+
+  &--padding {
+    padding-top: 0;
+  }
+
+  &__imgs {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 2rem 0;
+    position: relative;
+  }
+
+  .header__logo--padding {
+    padding-left: 0;
+  }
+
+  &__form {
+    display: grid;
+    justify-content: center;
+    grid-row-gap: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    gap: 3rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    @include media(display, (flex, none));
+  }
+
+  &__title-base-list {
+    display: none;
+    @include media(display, (none, block));
+  }
+
+  &__input {
+    margin-top: 1rem;
+    border-radius: 50px;
+    position: relative;
+    width: 22rem;
+  }
+
+  &__plan-events-list {
+    background-color: $light-blue-color;
+    width: 9rem;
+    padding: 1em;
+    text-align: left;
+  }
+
+  &__title-list {
+    text-decoration: underline;
+    text-align: left;
+  }
+
+  &__title-big-list {
+    text-align: left;
+  }
+
+  &__plan-events li {
+    position: relative;
+    float: left;
+  }
+
+  &__plan-events li:hover ul {
+    display: block;
+  }
+
+  &__plan-events li ul {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+  }
+
+  &__input::placeholder {
+    color: #959595;
+    font-size: 0.9rem;
+    padding-left: 0.4rem;
+  }
+
+  &__form {
+    position: relative;
+    display: none;
+    @include media(display, (none, block));
+  }
+
+  &__right {
+    text-align: center;
+    grid-row: 4;
+    grid-column: 1 / -1;
+  }
+
+
+  &__input {
+    height: 4rem;
+  }
+
+  &__plan-events-list-laptop {
+    padding-top: 1.5rem;
+    text-align: left;
+    width: 5.4rem;
+  }
+
+  &__plan-events-list-laptop--width {
+    width: 7.56rem;
+    padding-top: 1.5rem;
+  }
+}

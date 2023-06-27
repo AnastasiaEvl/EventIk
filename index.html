@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="./src/assets/fonts/proxima-nova/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&family=Raleway&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/scss/main.css" />
+    <title>Eventik</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <a class="header__link-logo" href="#"
+          ><img
+            class="header__logo"
+            src="./src/assets/icons/label.svg"
+            alt="eventik-label"
+        /></a>
+        <input
+          aria-label="button of burger menu"
+          id="header__menu"
+          type="checkbox"
+          class="header__menu-burger"
+        />
+        <label
+          aria-label="burger menu label"
+          class="header__menu"
+          for="header__menu"
+        >
+          <span class="header__menu-line"></span>
+        </label>
+        <nav class="header-nav">
+          <ul class="header-nav__menu">
+            <li class="header-nav__menu-link">
+              <a href="#shedules" class="header-nav__section">shedules</a>
+            </li>
+            <li class="header-nav__menu-link">
+              <a href="#speakers" class="header-nav__section">speakers</a>
+            </li>
+            <li class="header-nav__menu-link">
+              <a href="#ticket" class="header-nav__section">ticket</a>
+            </li>
+            <li class="header-nav__menu-link">
+              <a href="#contact" class="header-nav__section">contact</a>
+            </li>
+            <li class="header-nav__menu-link">
+              <a href="#login" class="header-nav__section">login</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content">
+        <section class="first-fold">
+          <img
+            class="first-fold__banner"
+            src="./src/assets/pictures/banner-main.png"
+            alt="pop group banner"
+          />
+          <div class="section-header">
+            <h2 class="section-header__title">
+              SBS MTV The Kpop Show Ticket Package
+            </h2>
+            <p class="section-header__description">
+              Look no further! Our SBS The Show tickets are the simplest way for
+              you to experience a live Kpop recording.
+            </p>
+            <div class="first-fold__buttons-container">
+              <button type="button" class="button button--colored">
+                get ticket
+              </button>
+              <button type="button" class="button button--transparent">
+                learn more
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="search-box">
+          <h2 class="invisible-title">Search box form</h2>
+          <form
+            class="search-box__form"
+            action="#"
+            method="post"
+            id="search-form"
+          >
+            <label for="event" class="search-box__label">Search Event</label>
+            <input
+              id="event"
+              class="search-box__input"
+              type="text"
+              name="event"
+              autocomplete="on"
+              value="Konser Jazz"
+            />
+            <label for="place" class="search-box__label">Place</label>
+            <input
+              id="place"
+              class="search-box__input"
+              type="text"
+              name="place"
+              autocomplete="on"
+              value="Indonesia"
+            />
+
+            <label for="time" class="search-box__label">Time</label>
+            <select id="time" name="time" class="search-box__input">
+              <option value="any-date">Any date</option>
+              <option value="july">July</option>
+              <option value="august">August</option>
+              <option value="september">September</option>
+            </select>
+          </form>
+        </section>
+        <section class="upcoming-events">
+          <h2 class="section-header__title section-header__title--blue">
+            upcoming events
+          </h2>
+          <div class="upcoming-events__buttons">
+            <label for="weekdays" class="upcoming-events__label"
+              >Weekdays</label
+            >
+            <select id="weekdays" name="weekdays" class="button button-events">
+              <option value="Weekdays1">Weekdays</option>
+              <option value="Weekdays2">Weekdays2</option>
+              <option value="Weekdays3">Weekdays3</option>
+              <option value="Weekdays4">Weekdays4</option>
+            </select>
+            <label for="event-type" class="upcoming-events__label"
+              >Event Type</label
+            >
+            <select
+              id="event-type"
+              name="event-type"
+              class="button button-events"
+            >
+              <option value="event-type1">Event Type</option>
+              <option value="event-type2">Event Type1</option>
+              <option value="event-type3">Event Type2</option>
+              <option value="event-type4">Event Type3</option>
+            </select>
+            <label for="any-category" class="upcoming-events__label"
+              >Any Category</label
+            >
+            <select
+              id="any-category"
+              name="event-type"
+              class="button button-events"
+            >
+              <option value="any-category1">Any Category</option>
+              <option value="any-category2">Any Category1</option>
+              <option value="any-category3">Any Category2</option>
+              <option value="any-category4">Any Category3</option>
+            </select>
+          </div>
+          <div class="upcoming-events__content">
+            <article class="upcoming-events__block">
+              <img
+                class="upcoming-events__block-img"
+                src="./src/assets/pictures/concert-fragment.png"
+                alt="banner"
+              />
+              <p class="upcoming-events__block-date">
+                <ruby>
+                  14<rt class="upcoming-events__block-month">APR</rt></ruby
+                >
+              </p>
+              <h2 class="upcoming-events__title">
+                Wonder Girls 2010 Wonder Girls World Tour San Francisco
+              </h2>
+              <p class="upcoming-events__description">
+                We’ll get you directly seated and inside for you to enjoy the
+                show.
+              </p>
+            </article>
+            <article class="upcoming-events__block">
+              <img
+                class="upcoming-events__block-img"
+                src="./src/assets/pictures/events-two.png"
+                alt="banner"
+              />
+              <p class="upcoming-events__block-date">
+                <ruby>
+                  20<rt class="upcoming-events__block-month">AUG</rt></ruby
+                >
+              </p>
+              <h2 class="upcoming-events__title">
+                JYJ 2011 JYJ Worldwide Concert Barcelona
+              </h2>
+              <p class="upcoming-events__description">
+                Directly seated and inside for you to enjoy the show.
+              </p>
+            </article>
+            <article class="upcoming-events__block">
+              <img
+                class="upcoming-events__block-img"
+                src="./src/assets/pictures/events-three.png"
+                alt="banner"
+              />
+              <p class="upcoming-events__block-date">
+                <ruby>
+                  18<rt class="upcoming-events__block-month">SEP</rt></ruby
+                >
+              </p>
+              <h2 class="upcoming-events__title">
+                2011 Super Junior SM Town Live '10 World Tour New York City
+              </h2>
+              <p class="upcoming-events__description">
+                Directly seated and inside for you to enjoy the show.
+              </p>
+            </article>
+            <article class="upcoming-events__block">
+              <img
+                class="upcoming-events__block-img"
+                src="./src/assets/pictures/events-four.png"
+                alt="banner"
+              />
+              <p class="upcoming-events__block-date">
+                <ruby>
+                  14<rt class="upcoming-events__block-month">APR</rt></ruby
+                >
+              </p>
+              <h2 class="upcoming-events__title">
+                Wonder Girls 2010 Wonder Girls World Tour San Francisco
+              </h2>
+              <p class="upcoming-events__description">
+                We’ll get you directly seated and inside for you to enjoy the
+                show.
+              </p>
+            </article>
+            <article class="upcoming-events__block">
+              <img
+                class="upcoming-events__block-img"
+                src="./src/assets/pictures/events-five.png"
+                alt="banner"
+              />
+              <p class="upcoming-events__block-date">
+                <ruby>
+                  20<rt class="upcoming-events__block-month">AUG</rt></ruby
+                >
+              </p>
+              <h2 class="upcoming-events__title">
+                JYJ 2011 JYJ Worldwide Concert Barcelona
+              </h2>
+              <p class="upcoming-events__description">
+                Directly seated and inside for you to enjoy the show.
+              </p>
+            </article>
+            <article class="upcoming-events__block">
+              <img
+                class="upcoming-events__block-img"
+                src="./src/assets/pictures/events-six.png"
+                alt="banner"
+              />
+              <p class="upcoming-events__block-date">
+                <ruby>
+                  18<rt class="upcoming-events__block-month">SEP</rt></ruby
+                >
+              </p>
+              <h2 class="upcoming-events__title">
+                2011 Super Junior SM Town Live '10 World Tour New York City
+              </h2>
+              <p class="upcoming-events__description">
+                Directly seated and inside for you to enjoy the show.
+              </p>
+            </article>
+          </div>
+          <button type="button" class="button button-transparent-blue">
+            load more
+          </button>
+        </section>
+        <section class="create-events">
+          <img
+            class="create-events__img"
+            src="./src/assets/pictures/makeEvents.png"
+            alt="events-img"
+          />
+          <div class="section-header section-header--black">
+            <h2 class="section-header__title">Make your own Event</h2>
+            <p
+              class="section-header__description section-header__description--light-black"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <button type="button" class="button button-create-events">
+              create events
+            </button>
+          </div>
+        </section>
+        <section class="brand">
+          <div class="section-header section-header--blue-brand">
+            <h2 class="section-header__title">Join these brands</h2>
+            <p
+              class="section-header__description section-header__description--light-grey"
+            >
+              We've had the pleasure of working with industry-defining brands.
+              These are just some of them.
+            </p>
+          </div>
+          <div class="brand__img">
+            <img
+              class="brand__img-logo"
+              src="./src/assets/icons/spotify.svg"
+              alt="spotify-logo"
+            />
+            <img
+              class="brand__img-logo"
+              src="./src/assets/icons/google.svg"
+              alt="google-logo"
+            />
+            <img
+              class="brand__img-logo"
+              src="./src/assets/icons/stripe.svg"
+              alt="stripe-logo"
+            />
+            <img
+              class="brand__img-logo"
+              src="./src/assets/icons/youtube.svg"
+              alt="youtube-logo"
+            />
+            <img
+              class="brand__img-logo"
+              src="./src/assets/icons/microsoft.svg"
+              alt="microsoft-logo"
+            />
+            <img
+              class="brand__img-logo"
+              src="./src/assets/icons/medium.svg"
+              alt="medium-logo"
+            />
+            <img
+              class="brand__img-logo"
+              src="./src/assets/icons/zoom.svg"
+              alt="zoom-logo"
+            />
+            <img
+              class="brand__img-logo"
+              src="./src/assets/icons/uber-new1.svg"
+              alt="uber-logo"
+            />
+            <img
+              class="brand__img-logo"
+              src="./src/assets/icons/grab.svg"
+              alt="grab-logo"
+            />
+          </div>
+        </section>
+        <section class="blog">
+          <div class="section-header section-header--blue">
+            <h2 class="section-header__title--blue">Blog</h2>
+            <p
+              class="section-header__description section-header__description--light-grey"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="blog__content-card">
+            <article class="blog__card">
+              <img
+                class="blog__card-img"
+                src="./src/assets/pictures/blog-card-one.png"
+                alt="blog-banner"
+              />
+              <h3 class="blog__title">
+                6 Strategies to Find Your Conference Keynote and Other Speakers
+              </h3>
+              <p class="blog__text">
+                Sekarang, kamu bisa produksi tiket fisik untuk eventmu bersama
+                Bostiketbos. Hanya perlu mengikuti beberapa langkah mudah.
+              </p>
+              <p class="blog__date">12 Mar - Jhon Doe</p>
+            </article>
+            <article class="blog__card">
+              <img
+                class="blog__card-img"
+                src="./src/assets/pictures/blog-card-two.png"
+                alt="blog-banner"
+              />
+              <h3 class="blog__title">
+                How Successfully Used Paid Marketing to Drive Incremental Ticket
+                Sales
+              </h3>
+              <p class="blog__text">
+                Sekarang, kamu bisa produksi tiket fisik untuk eventmu bersama
+                Bostiketbos. Hanya perlu mengikuti beberapa langkah mudah.
+              </p>
+              <p class="blog__date">12 Mar - Jhon Doe</p>
+            </article>
+            <article class="blog__card">
+              <img
+                class="blog__card-img"
+                src="./src/assets/pictures/blog-cad-three.png"
+                alt="blog-banner"
+              />
+              <h3 class="blog__title">
+                Introducing Workspaces: Work smarter, not harder with new
+                navigation
+              </h3>
+              <p class="blog__text">
+                Sekarang, kamu bisa produksi tiket fisik untuk eventmu bersama
+                Bostiketbos. Hanya perlu mengikuti beberapa langkah mudah.
+              </p>
+              <p class="blog__date">12 Mar - Jhon Doe</p>
+            </article>
+            <article class="blog__card">
+              <img
+                class="blog__card-img"
+                src="./src/assets/pictures/blog-cad-three.png"
+                alt="blog-banner"
+              />
+              <h3 class="blog__title">
+                Introducing Workspaces: Work smarter, not harder with new
+                navigation
+              </h3>
+              <p class="blog__text">
+                Sekarang, kamu bisa produksi tiket fisik untuk eventmu bersama
+                Bostiketbos. Hanya perlu mengikuti beberapa langkah mudah.
+              </p>
+              <p class="blog__date">12 Mar - Jhon Doe</p>
+            </article>
+          </div>
+          <button type="button" class="button button-transparent-blue">
+            load more
+          </button>
+        </section>
+      </div>
+      <footer class="footer">
+        <div class="footer__label">
+          <a class="footer__label-link" href="#"
+            ><img
+              class="header__logo header__logo--padding"
+              src="./src/assets/icons/label.svg"
+              alt="eventik-label"
+          /></a>
+          <p class="footer__description footer__description--padding">
+            Eventick is a global self-service ticketing platform for live
+            experiences that allows anyone to create, share, find and attend
+            events that fuel their passions and enrich their lives.
+          </p>
+          <div class="footer__imgs">
+            <a href="#"
+              ><img
+                class="footer__imgs-icons"
+                src="./src/assets/icons/facebook.svg"
+                alt="facebook"
+            /></a>
+            <a href="#">
+              <img
+                class="footer__imgs-icons"
+                src="./src/assets/icons/telegram.svg"
+                alt="twitter"
+            /></a>
+            <a href="#"
+              ><img
+                class="footer__imgs-icons"
+                src="./src/assets/icons/linkedin.svg"
+                alt="linkedin"
+            /></a>
+          </div>
+        </div>
+        <div class="footer__list">
+          <ul class="footer__plan-events">
+            <li class="footer__plan-events-title">
+              <h2 class="footer__title-list">Plan Events</h2>
+              <ul class="footer__plan-events-list">
+                <li><a>Create and Set Up</a></li>
+                <li><a>Sell Tickets</a></li>
+                <li><a>Online RSVP</a></li>
+                <li><a>Online Events</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="footer__plan-events">
+            <li class="footer__plan-events-title">
+              <h2 class="footer__title-list">Eventick</h2>
+              <ul class="footer__plan-events-list">
+                <li><a>About us</a></li>
+                <li><a>Press</a></li>
+                <li><a>Contact Us</a></li>
+                <li><a>Help Center</a></li>
+                <li><a>How it Works</a></li>
+                <li><a>Privacy</a></li>
+                <li><a>Terms</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__title-base-list">
+          <h2 class="footer__title-big-list">Plan Events</h2>
+          <ul
+            class="footer__plan-events-list-laptop footer__plan-events-list-laptop--width"
+          >
+            <li><a>Create and Set Up </a></li>
+            <li><a>Sell Tickets</a></li>
+            <li>
+              <a>Online RSVP</a>
+            </li>
+            <li>
+              <a>Online Events</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__title-base-list">
+          <h2>Eventick</h2>
+          <ul class="footer__plan-events-list-laptop">
+            <li><a>About us </a></li>
+            <li><a>Press</a></li>
+            <li>
+              <a>Contact Us</a>
+            </li>
+            <li>
+              <a>Help Center</a>
+            </li>
+            <li>
+              <a>How it Works</a>
+            </li>
+            <li>
+              <a>Privacy</a>
+            </li>
+            <li>
+              <a>Terms</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__input-container">
+          <h2 class="footer__title-big-list">Stay in the loop</h2>
+          <p class="footer__description">
+            Join our mailing list to stay in the loop with our newest for Event
+            and concert
+          </p>
+          <form action="#" class="footer__form">
+            <label for ="email_input" class="invisible-title">e-mail address</label>
+            <input
+              type="text"
+              id="email_input"
+              class="footer__input"
+              name="footer__input"
+              placeholder="Enter your email address.."
+            />
+            <button type="submit" class="button button__footer">
+              Subscibe Now
+            </button>
+          </form>
+        </div>
+        <p class="footer__right">Copyright © 2022 Avi Yansah</p>
+      </footer>
+    </div>
+  </body>
+</html>

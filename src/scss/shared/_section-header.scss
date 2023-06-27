@@ -1,0 +1,61 @@
+.invisible-title{
+  display: none;
+}
+
+.section-header{
+  font-family: $header-font-text;
+  color: $based-text-color;
+  position: relative;
+  z-index: 2;
+  padding: 2rem 0.5rem 1rem 0.5rem;
+  text-align: center;
+  @include media(text-align, (left, left));
+
+  &__title{
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 2rem;
+    text-transform: capitalize;
+  }
+
+  &__description{
+    font-size: 1.125rem;
+    &--light-black{
+      color:#272727;
+    }
+    &--light-grey{
+      color: #6A6A6A;
+      text-align: center;
+      padding-top: 1rem;
+    }
+  }
+
+  &__title--blue{
+    color: $blue-text-color;
+    grid-area: header;
+    font-size: 2rem;
+    grid-column: 1/-1;
+    @include media(grid-column,('1 / 2', '1 / 2'));
+    @include media(padding-left,(0, 1rem));
+  }
+
+  &--black{
+    color: black;
+    padding-top:2rem;
+    @include media(padding-top,(0,0));
+  }
+
+  &--blue-brand{
+    color: $blue-text-color;
+    text-align: center;
+  }
+
+  &--blue{
+    text-align: center;
+    grid-area: header;
+  }}
+
+
+
+
+
